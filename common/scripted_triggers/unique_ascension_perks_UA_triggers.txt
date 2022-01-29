@@ -27,8 +27,6 @@ can_marauder_attack = {
 }
 
 can_fallen_empire_contact = { 
-	OR = { 
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-	} 
+	
+		is_fallen_empire = yes 
 }

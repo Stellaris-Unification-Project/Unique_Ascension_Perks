@@ -15,8 +15,8 @@ launch_machine_uprising = {
 			center = root.solar_system
 			owned_planets_percentage = 0.5
 			planet_limit = {
-				OR = { controller = { is_same_value = root.owner } solar_system = { exists = starbase starbase = { owner = { is_same_value = root.owner } } } }
-				solar_system = { NOT = { any_system_planet = { is_same_value = root.owner.capital_scope } } } # never flip any planets in the capital system
+				OR = { controller = { is_same_empire = root.owner } solar_system = { exists = starbase starbase = { is_owned_by = root.owner } } }
+				solar_system = { NOT = { any_system_planet = { is_same_empire = root.owner.capital_scope } } } # never flip any planets in the capital system
 			}
 			effect = { set_star_flag = machup_system_flip }
 		}
@@ -129,7 +129,7 @@ launch_machine_uprising_settings = {
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
-					owner = { is_same_value = event_target:current_uprising_originator }
+					is_owned_by = event_target:current_uprising_originator
 					any_owned_ship = { is_ship_class = shipclass_military_station }
 				}
 				set_owner = root
@@ -160,9 +160,9 @@ launch_machine_uprising_settings = {
 		# flip remaining flagged planets
 		while = {
 			count = 100
-			limit = { any_system = { has_star_flag = machup_system_flip exists = starbase starbase = { owner = { is_same_value = event_target:current_uprising_originator } } } }
+			limit = { any_system = { has_star_flag = machup_system_flip exists = starbase starbase = { is_owned_by = event_target:current_uprising_originator } } }
 			random_system = {
-				limit = { has_star_flag = machup_system_flip exists = starbase starbase = { owner = { is_same_value = event_target:current_uprising_originator } } }
+				limit = { has_star_flag = machup_system_flip exists = starbase starbase = { is_owned_by = event_target:current_uprising_originator } }
 				starbase = { set_owner = root }
 			}
 		}
@@ -172,7 +172,7 @@ launch_machine_uprising_settings = {
                 # flip military stations
                 solar_system = {
                     every_fleet_in_system = {
-                        limit = { exists = owner owner = { is_same_value = event_target:current_uprising_originator } any_owned_ship = { is_ship_class = shipclass_military_station } }
+                        limit = { exists = owner is_owned_by = event_target:current_uprising_originator any_owned_ship = { is_ship_class = shipclass_military_station } }
                         set_owner = root
                     }
                 }

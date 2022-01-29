@@ -9,7 +9,7 @@ decision_stellar_manipulation = {
 	}
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		OR = { has_global_flag = ap_stellar_manipulation from = { has_ascension_perk = ap_stellar_manipulation } }
 		is_a_habitable_planet_megastructure = yes
 	}
@@ -275,7 +275,7 @@ decision_hivemind_reserve_unhabited = {
 	resources = { category = decisions cost = { food = 900 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_hivemind_reserve }
 		is_colonizeable_planet = yes
 		has_owner = no
@@ -296,7 +296,7 @@ decision_primitive_creation = {
 	resources = { category = decisions cost = { food = 1000 minerals = 2500 energy = 2000 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_primitives_creation }
 		OR = {
 			habitable_planet = yes
@@ -322,7 +322,7 @@ decision_primitive_creation_unhabitable = {
 	prerequisites = { tech_climate_restoration }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_primitives_creation }
 		OR = {
 			is_planet_class = pc_molten
@@ -356,7 +356,7 @@ decision_powerful_vassal = {
 	}
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_powerful_vassals }
 		is_colonizeable_colony = yes
 		NOT = { has_planet_flag = planet_marked_for_handover }
@@ -371,7 +371,7 @@ decision_give_planet_to_vassal = {
 	resources = { category = decisions cost = { unity = 200 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_powerful_vassals }
 		is_colonizeable_colony = yes
 		NOT = { has_planet_flag = planet_marked_for_handover }
@@ -385,7 +385,7 @@ decision_dont_give_planet_to_vassal = {
 	icon = decision_powerful_vassal
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_powerful_vassals }
 		is_colonizeable_colony = yes
 		has_planet_flag = planet_marked_for_handover
@@ -400,7 +400,7 @@ decision_nanite_extraction = {
 	resources = { category = decisions cost = { nanites = 1250 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_nano_to_nanite }
 		is_colonizeable_planet = yes
 		#has_owner = no
@@ -433,7 +433,7 @@ decision_nanite_purification = {
 	resources = { category = decisions cost = { nanites = 3000 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_nano_to_nanite }
 		is_planet_class = pc_gray_goo
 		#has_owner = no
@@ -530,7 +530,7 @@ decision_legendary_forge = {
 	resources = { category = decisions cost = { minerals = 15000 alloys = 1000 sr_living_metal = 75 } }
 	potential = {
 		exists = space_owner
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = { has_ascension_perk = ap_legendary_forge }
 		is_planet_class = pc_molten
 		has_owner = no

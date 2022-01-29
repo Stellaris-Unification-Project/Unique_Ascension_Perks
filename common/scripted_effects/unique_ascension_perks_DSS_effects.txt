@@ -8,7 +8,7 @@ find_planet_for_new_anomaly = {
 	if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 1 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 2 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 2 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -18,7 +18,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 2 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 4 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 4 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -28,7 +28,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 3 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 6 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 6 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -38,7 +38,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 4 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 8 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 8 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -48,7 +48,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 5 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 10 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 10 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -58,7 +58,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 6 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 12 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 12 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -68,7 +68,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 7 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 14 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 14 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -78,7 +78,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 8 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 16 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 16 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -88,7 +88,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 9 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 18 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 18 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -98,7 +98,7 @@ find_planet_for_new_anomaly = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 10 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 20 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_be_deep_scanned = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 20 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_be_deep_scanned = yes } }
 			random_system_planet = {
 				limit = { can_be_deep_scanned = yes }
 				save_event_target_as = deep_scanned_planet
@@ -285,7 +285,7 @@ find_planet_for_new_archaeological_site = {
 	if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 1 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 2 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 2 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -295,7 +295,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 2 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 4 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 4 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -305,7 +305,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 3 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 6 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 6 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -315,7 +315,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 4 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 8 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 8 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -325,7 +325,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 5 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 10 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 10 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -335,7 +335,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 6 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 12 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 12 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -345,7 +345,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 7 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 14 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 14 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -355,7 +355,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 8 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 16 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 16 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -365,7 +365,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 9 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 18 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 18 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site
@@ -375,7 +375,7 @@ find_planet_for_new_archaeological_site = {
 	else_if = {
 		limit = { num_buildings = { type = building_deep_space_scanner value = 10 } }
 		random_system = {
-			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 20 } exists = space_owner space_owner = { is_same_value = root.owner } any_system_planet = { can_spawn_archaeological_site = yes } }
+			limit = { distance = {source = ROOT use_bypasses = no min_jumps = 1 max_jumps = 20 } exists = space_owner is_owned_by = root.owner any_system_planet = { can_spawn_archaeological_site = yes } }
 			random_system_planet = {
 				limit = { can_spawn_archaeological_site = yes }
 				save_event_target_as = planet_archaeological_site

@@ -1,7 +1,7 @@
 d_energy_v2_7 = {
 	resources = { category = orbital_mining_deposits produces = { energy = 7 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -9,7 +9,7 @@ d_energy_v2_7 = {
 d_energy_v2_8 = {
 	resources = { category = orbital_mining_deposits produces = { energy = 8 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -17,7 +17,7 @@ d_energy_v2_8 = {
 d_energy_v2_9 = {
 	resources = { category = orbital_mining_deposits produces = { energy = 9 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -25,7 +25,7 @@ d_energy_v2_9 = {
 d_energy_v2_10 = {
 	resources = { category = orbital_mining_deposits produces = { energy = 10 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -33,7 +33,7 @@ d_energy_v2_10 = {
 d_minerals_v2_7 = {
 	resources = { category = orbital_mining_deposits produces = { minerals = 7 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -41,7 +41,7 @@ d_minerals_v2_7 = {
 d_minerals_v2_8 = {
 	resources = { category = orbital_mining_deposits produces = { minerals = 8 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -49,7 +49,7 @@ d_minerals_v2_8 = {
 d_minerals_v2_9 = {
 	resources = { category = orbital_mining_deposits produces = { minerals = 9 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -57,7 +57,7 @@ d_minerals_v2_9 = {
 d_minerals_v2_10 = {
 	resources = { category = orbital_mining_deposits produces = { minerals = 10 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -65,7 +65,7 @@ d_minerals_v2_10 = {
 d_food_v2_7 = {
 	resources = { category = orbital_mining_deposits produces = { food = 7 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -73,7 +73,7 @@ d_food_v2_7 = {
 d_food_v2_8 = {
 	resources = { category = orbital_mining_deposits produces = { food = 8 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -81,7 +81,7 @@ d_food_v2_8 = {
 d_food_v2_9 = {
 	resources = { category = orbital_mining_deposits produces = { food = 9 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -89,7 +89,7 @@ d_food_v2_9 = {
 d_food_v2_10 = {
 	resources = { category = orbital_mining_deposits produces = { food = 10 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -97,7 +97,7 @@ d_food_v2_10 = {
 d_alloys_v2_4 = {
 	resources = { category = orbital_mining_deposits produces = { alloys = 4 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -105,7 +105,7 @@ d_alloys_v2_4 = {
 d_alloys_v2_5 = {
 	resources = { category = orbital_mining_deposits produces = { alloys = 5 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -113,7 +113,7 @@ d_alloys_v2_5 = {
 d_rare_crystals_v2_2 = {
 	resources = { category = orbital_mining_deposits produces = { rare_crystals = 2 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -121,7 +121,7 @@ d_rare_crystals_v2_2 = {
 d_rare_crystals_v2_3 = {
 	resources = { category = orbital_mining_deposits produces = { rare_crystals = 3 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -129,7 +129,7 @@ d_rare_crystals_v2_3 = {
 d_exotic_gases_v2_2 = {
 	resources = { category = orbital_mining_deposits produces = { exotic_gases = 2 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -137,7 +137,7 @@ d_exotic_gases_v2_2 = {
 d_exotic_gases_v2_3 = {
 	resources = { category = orbital_mining_deposits produces = { exotic_gases = 3 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -145,7 +145,7 @@ d_exotic_gases_v2_3 = {
 d_volatile_motes_v2_2 = {
 	resources = { category = orbital_mining_deposits produces = { volatile_motes = 2 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -153,7 +153,7 @@ d_volatile_motes_v2_2 = {
 d_volatile_motes_v2_3 = {
 	resources = { category = orbital_mining_deposits produces = { volatile_motes = 3 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -161,7 +161,7 @@ d_volatile_motes_v2_3 = {
 d_treasures_1 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 1 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -169,7 +169,7 @@ d_treasures_1 = {
 d_treasures_2 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 2 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -177,7 +177,7 @@ d_treasures_2 = {
 d_treasures_3 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 3 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -185,7 +185,7 @@ d_treasures_3 = {
 d_treasures_4 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 4 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -193,7 +193,7 @@ d_treasures_4 = {
 d_treasures_5 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 5 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -201,7 +201,7 @@ d_treasures_5 = {
 d_treasures_6 = {
 	resources = { category = orbital_mining_deposits produces = { treasures = 6 } }
 	station = shipclass_mining_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -209,7 +209,7 @@ d_treasures_6 = {
 d_anti_matter_1 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 1 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 1000 }
 }
@@ -217,7 +217,7 @@ d_anti_matter_1 = {
 d_anti_matter_2 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 2 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 750 }
 }
@@ -225,7 +225,7 @@ d_anti_matter_2 = {
 d_anti_matter_3 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 3 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 400 }
 }
@@ -233,7 +233,7 @@ d_anti_matter_3 = {
 d_anti_matter_4 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 4 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 0 }
 }
@@ -241,7 +241,7 @@ d_anti_matter_4 = {
 d_anti_matter_5 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 5 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 0 }
 }
@@ -249,55 +249,55 @@ d_anti_matter_5 = {
 d_anti_matter_6 = {
 	resources = { category = orbital_research_deposits produces = { anti_matter = 6 } }
 	station = shipclass_research_station
-	is_for_colonizeable = no
+	is_for_colonizable = no
 	potential = { is_planet_class = pc_whitte_hole }
 	drop_weight = { weight = 0 }
 }
 
 d_treasures_planet = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	resources = { produces = { treasures = 5 } }	
 }
 
 d_energy_generator = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { produces = { energy = 8 } }	
 }
 
 d_mineral_replicator = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { produces = { minerals = 8 } }	
 }
 
 d_house_farming = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_food
 	drop_weight = { weight = 0 }
 	resources = { produces = { food = 8 } }	
 }
 
 d_research_center = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { physics_research = 5 society_research = 5 engineering_research = 5 } }
 }
 
 d_trade_depot = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	planet_modifier = { trade_value_add = 10 }	
 }
 
 d_hivemind_node = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	planet_modifier = { planet_jobs_produces_mult = 0.02 planet_housing_add = 4 }	
@@ -305,7 +305,7 @@ d_hivemind_node = {
 }
 
 d_auto_factory = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	planet_modifier = { pop_assembly_speed = 0.15 }	
@@ -313,14 +313,14 @@ d_auto_factory = {
 }
 
 d_unit_entrepot = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	planet_modifier = { planet_housing_add = 10 }
 }
 
 d_hivemind_reserve = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_rare
@@ -335,7 +335,7 @@ d_hivemind_reserve = {
 }
 
 d_district_governor = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -345,7 +345,7 @@ d_district_governor = {
 }
 
 d_district_university = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -355,7 +355,7 @@ d_district_university = {
 }
 
 d_district_defense = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -365,7 +365,7 @@ d_district_defense = {
 }
 
 d_district_industry = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -375,7 +375,7 @@ d_district_industry = {
 }
 
 d_district_queen = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -385,7 +385,7 @@ d_district_queen = {
 }
 
 d_district_nursery = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -395,7 +395,7 @@ d_district_nursery = {
 }
 
 d_district_forest = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -405,7 +405,7 @@ d_district_forest = {
 }
 
 d_district_entrepot = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -415,7 +415,7 @@ d_district_entrepot = {
 }
 
 d_district_foundry = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -425,7 +425,7 @@ d_district_foundry = {
 }
 
 d_district_security = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -435,7 +435,7 @@ d_district_security = {
 }
 
 d_district_upgrade = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -445,7 +445,7 @@ d_district_upgrade = {
 }
 
 d_district_recycling = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -455,7 +455,7 @@ d_district_recycling = {
 }
 
 d_district_finance = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -465,7 +465,7 @@ d_district_finance = {
 }
 
 d_district_casino = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -475,7 +475,7 @@ d_district_casino = {
 }
 
 d_district_bank = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -485,7 +485,7 @@ d_district_bank = {
 }
 
 d_district_journalism = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	#all_terraforming_swap_types = no
 	category = deposit_cat_energy
@@ -496,77 +496,77 @@ d_district_journalism = {
 
 d_breeding_facility_1 = {
 	icon = d_breeding_facility
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_breeding_facility_2 = {
 	icon = d_breeding_facility
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_breeding_facility_3 = {
 	icon = d_breeding_facility
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_breeding_facility_4 = {
 	icon = d_breeding_facility
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_breeding_facility_5 = {
 	icon = d_breeding_facility
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_robot_command_1 = {
 	icon = d_robot_command
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_robot_command_2 = {
 	icon = d_robot_command
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_robot_command_3 = {
 	icon = d_robot_command
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_robot_command_4 = {
 	icon = d_robot_command
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_robot_command_5 = {
 	icon = d_robot_command
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 }
 
 d_civilian_cargo_capital_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { influence = 0.1 unity = 5 physics_research = 3 society_research = 3 engineering_research = 3 } }
@@ -574,7 +574,7 @@ d_civilian_cargo_capital_world = {
 
 d_civilian_cargo_gene_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_food
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { energy = 12 } }
@@ -583,7 +583,7 @@ d_civilian_cargo_gene_world = {
 
 d_civilian_cargo_mining_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { minerals = 12 } }
@@ -592,7 +592,7 @@ d_civilian_cargo_mining_world = {
 
 d_civilian_cargo_agri_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_food
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { food = 12 } }
@@ -601,7 +601,7 @@ d_civilian_cargo_agri_world = {
 
 d_civilian_cargo_indus_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { consumer_goods = 6 } }
@@ -610,7 +610,7 @@ d_civilian_cargo_indus_world = {
 
 d_civilian_cargo_forge_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { alloys = 6 } }
@@ -619,7 +619,7 @@ d_civilian_cargo_forge_world = {
 
 d_civilian_cargo_tech_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { physics_research = 9 society_research = 9 engineering_research = 9 } }
@@ -628,7 +628,7 @@ d_civilian_cargo_tech_world = {
 
 d_civilian_cargo_refinery_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { volatile_motes = 1 exotic_gases = 1 rare_crystals = 1 } }
@@ -636,7 +636,7 @@ d_civilian_cargo_refinery_world = {
 
 d_civilian_cargo_trade_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits }
@@ -645,7 +645,7 @@ d_civilian_cargo_trade_world = {
 
 d_civilian_cargo_rural_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { energy = 5 minerals = 5 food = 5 } }
@@ -654,7 +654,7 @@ d_civilian_cargo_rural_world = {
 
 d_civilian_cargo_urban_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits }
@@ -663,7 +663,7 @@ d_civilian_cargo_urban_world = {
 
 d_civilian_cargo_nest_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { food = 4 } }
@@ -672,7 +672,7 @@ d_civilian_cargo_nest_world = {
 
 d_civilian_cargo_nexus_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { energy = 4 } }
@@ -681,7 +681,7 @@ d_civilian_cargo_nexus_world = {
 
 d_civilian_cargo_fortress_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { society_research = 2 unity = 6 } }
@@ -690,7 +690,7 @@ d_civilian_cargo_fortress_world = {
 
 d_civilian_cargo_colony_world = {
 	icon = d_civilian_cargo
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = {

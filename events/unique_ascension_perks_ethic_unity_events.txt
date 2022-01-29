@@ -5,10 +5,7 @@ country_event = {# Militarist - Unity by destroying ships
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 		has_ascension_perk = ap_advanced_government_2
 		FromFromFrom = { 
 			OR = {
@@ -179,10 +176,7 @@ country_event = {# Pacifist - Unity by keeping a year of peace
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-		}
+		is_pacifist = yes
 		has_ascension_perk = ap_advanced_government_2
 		is_at_war = no
 	}
@@ -194,10 +188,7 @@ country_event = {# Materialist - Unity by unlocking new techs
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
-		}
+		is_materialist = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { add_monthly_resource_mult = { resource = unity value = 6 min = 6 max = 2000 } }
@@ -208,10 +199,7 @@ country_event = {# Spiritualist - Unity by number of happy pop
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
 		has_ascension_perk = ap_advanced_government_2
 		any_owned_pop = { is_enslaved = no is_being_purged = no is_robot_pop = no happiness > 0.7 }		
 	}
@@ -325,10 +313,7 @@ country_event = {# Libetarian - Unity by electing a ruler
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_fanatic_egalitarian
-		}
+		is_egalitarian = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { add_monthly_resource_mult = { resource = unity value = 20 min = 20 max = 5000 } }
@@ -340,10 +325,8 @@ country_event = {# Authoritarian & Xenophobe - Unity by number of slaves
 	is_triggered_only = yes	
 	trigger = {
 		OR = {
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
-			has_ethic = ethic_xenophobe
-			has_ethic = ethic_fanatic_xenophobe
+			is_authoritarian = yes
+			is_xenophobe = yes
 		}
 		has_ascension_perk = ap_advanced_government_2
 		any_owned_pop = { is_enslaved = yes }
@@ -450,10 +433,7 @@ country_event = {# Xenophile - Unity by number of xeno pops
 	is_triggered_only = yes	
 	trigger = {
 		num_species > 1
-		OR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-		}	
+		is_xenophile = yes	
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { 
@@ -475,10 +455,8 @@ country_event = {# Xenophobe & Militarist - Unity by number of rivalries
 	is_triggered_only = yes	
 	trigger = {
 		OR = {
-			has_ethic = ethic_xenophobe
-			has_ethic = ethic_fanatic_xenophobe
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
+			is_xenophobe = yes
+			is_militarist = yes
 		}	
 		has_ascension_perk = ap_advanced_government_2
 		any_neighbor_country = { root = { is_rival = prev } }
@@ -715,10 +693,7 @@ ship_event = {# Materialist - Unity by building research stations
 	trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}	
+			is_materialist = yes	
 			has_ascension_perk = ap_advanced_government_2
 		}
 	}
@@ -736,10 +711,7 @@ ship_event = {# Xenophobe - Unity by building outpost stations
 	trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = yes
 			has_ascension_perk = ap_advanced_government_2	
 		}
 	}
@@ -758,8 +730,7 @@ planet_event = {# Materialist & Gestalt Consciousness - Unity by building pop
 		exists = owner
 		owner = {
 			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
+				is_materialist = yes
 				has_ethic = ethic_gestalt_consciousness
 			}
 			has_ascension_perk = ap_advanced_government_2	
@@ -777,10 +748,7 @@ country_event = {# Militarist - Unity on winning ground battle
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { 	
@@ -793,10 +761,7 @@ country_event = {# Pacifist - Unity on defending ground battle
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-		}
+		is_pacifist = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { 	
@@ -811,10 +776,7 @@ ship_event = {# Materialist - Unity by surveying planet
 	trigger = {
 		exists = owner
 		owner = {
-			OR =  {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}	
+			is_materialist = yes	
 			has_ascension_perk = ap_advanced_government_2
 		}
 	}
@@ -851,10 +813,8 @@ country_event = {# Militarist & Pacifist - Unity on winning space battle
 	is_triggered_only = yes	
 	trigger = {
 		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
+			is_militarist = yes
+			is_pacifist = yes
 		}
 		has_ascension_perk = ap_advanced_government_2
 	}
@@ -870,10 +830,7 @@ ship_event = {# Xenophile - Unity by building observation post
 	trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}	
+			is_xenophile = yes	
 			has_ascension_perk = ap_advanced_government_2
 		}
 	}
@@ -889,10 +846,7 @@ country_event = {# Militarist - Unity on entering war
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { 	
@@ -905,10 +859,7 @@ country_event = {# Militarist - Unity by doing a year of war
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 		is_at_war = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
@@ -922,10 +873,7 @@ planet_event = {# Xenophobe - Purge Pops
 	trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = yes
 			has_ascension_perk = ap_advanced_government_2	
 		}  
 	}
@@ -941,10 +889,7 @@ country_event = {# Xenophile - Unity by having new contact
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		OR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-		}	
+		is_xenophile = yes	
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = {
@@ -960,21 +905,19 @@ ship_event = {# Militarist & Materialist - Unity by building ships
 		exists = owner
 		owner = {
 			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
+				is_militarist = yes
+				is_materialist = yes
 			}	
 			has_ascension_perk = ap_advanced_government_2
 		}
 	}
 	immediate = {
 		if = {
-			limit = { owner = { OR = { has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist } } is_ship_class = shipclass_military }
+			limit = { owner = { OR = { is_militarist = yes } } is_ship_class = shipclass_military }
 			owner = { add_monthly_resource_mult = { resource = unity value = 2 min = 2 max = 500 } }
 		}
 		if = {
-			limit = { owner = { OR = { has_ethic = ethic_materialist has_ethic = ethic_fanatic_materialist } } is_ship_class = shipclass_science_ship }
+			limit = { owner = { OR = { is_materialist = yes } } is_ship_class = shipclass_science_ship }
 			owner = { add_monthly_resource_mult = { resource = unity value = 2 min = 2 max = 500 } }
 		}
 	}
@@ -988,10 +931,8 @@ ship_event = {# Militarist & Materialist - Unity by upgrading ships
 		exists = owner
 		owner = {
 			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
+				is_militarist = yes
+				is_materialist = yes
 			}
 			has_ascension_perk = ap_advanced_government_2	
 		}
@@ -1012,22 +953,19 @@ country_event = {# Pacifist - Unity by ending war
 			AND = { has_ethic = ethic_pacifist has_ascension_perk = ap_advanced_government_2 }
 			AND = { has_ethic = ethic_fanatic_pacifist has_ascension_perk = ap_advanced_government_2 }
 			From = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 				has_ascension_perk = ap_advanced_government_2
 			}
 		}
 	}
 	immediate = { 
 		if = {
-			limit = { OR = { has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist } }
+			limit = { OR = { is_pacifist = yes } }
 			add_monthly_resource_mult = { resource = unity value = 6 min = 6 max = 2000 }
 		}
 		From = { 
 			if = {
-				limit = { OR = { has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist } }
+				limit = { OR = { is_pacifist = yes } }
 				add_monthly_resource_mult = { resource = unity value = 6 min = 6 max = 2000 }
 			}
 		} 
@@ -1039,10 +977,7 @@ country_event = {# Xenophile - Unity by specie modification
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-		}
+		is_xenophile = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { 	
@@ -1058,10 +993,8 @@ planet_event = {# Militarist & Authoritarian - Unity by building armies
 		exists = owner
 		owner = {
 			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
+				is_militarist = yes
+				is_authoritarian = yes
 			}
 			has_ascension_perk = ap_advanced_government_2
 		}
@@ -1078,10 +1011,7 @@ country_event = {# Militarist - Unity by winning war
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {	
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { add_monthly_resource_mult = { resource = unity value = 6 min = 6 max = 2000 } }
@@ -1095,10 +1025,8 @@ planet_event = {# Militarist & Xenophobe - Unity by conquering planet
 		exists = owner
 		owner = {
 			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+				is_militarist = yes
+				is_xenophobe = yes
 			}
 			has_ascension_perk = ap_advanced_government_2	
 		}
@@ -1116,10 +1044,8 @@ country_event = {# Pacifist & Xenophile - Unity by joining alliance
 	is_triggered_only = yes	
 	trigger = {	
 		OR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
+			is_xenophile = yes
+			is_pacifist = yes
 		}
 		has_ascension_perk = ap_advanced_government_2
 	}
@@ -1131,10 +1057,7 @@ country_event = {# Materialist & Industrialist - Unity by building megastructure
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {	
-		OR = {
-			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
-		}
+		is_materialist = yes
 		has_ascension_perk = ap_advanced_government_2
 		From ={
 			NOR = {
@@ -1150,10 +1073,7 @@ country_event = {# Libetarian - Unity by starting election
 	hide_window = yes
 	is_triggered_only = yes	
 	trigger = {
-		OR = {
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_fanatic_egalitarian
-		}
+		is_egalitarian = yes
 		has_ascension_perk = ap_advanced_government_2
 	}
 	immediate = { add_monthly_resource_mult = { resource = unity value = 6 min = 6 max = 2000 } }
@@ -1197,11 +1117,8 @@ event = {
 		every_galaxy_planet = {
 			limit = {
 				exists = owner
-				owner = { 
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+				owner = {
+					is_spiritualist = yes
 					has_ascension_perk = ap_advanced_government_2
 				}
 				free_amenities >= 20				
@@ -1211,11 +1128,8 @@ event = {
 		every_galaxy_planet = {
 			limit = {
 				exists = owner
-				owner = { 
-					OR = {
-						has_ethic = ethic_authoritarian
-						has_ethic = ethic_fanatic_authoritarian
-					}
+				owner = {
+					is_authoritarian = yes
 					has_ascension_perk = ap_advanced_government_2
 				}
 				planet_stability >= 60

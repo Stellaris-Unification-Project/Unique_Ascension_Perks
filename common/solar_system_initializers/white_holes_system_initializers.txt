@@ -72,8 +72,7 @@ white_hole_system_10 = {
 	planet = { class = "pc_whitte_hole" orbit_distance = 0 orbit_angle = 170 size = 5 has_ring = no }
 	init_effect = {
 		create_cloud_country = yes
-		random_system_planet = {
-			limit = { is_star = yes }
+		star = {
 			event_target:cloud_country = {
 				create_fleet = {
 					name = "NAME_Void_Cloud"

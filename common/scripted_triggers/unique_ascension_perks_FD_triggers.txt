@@ -41,15 +41,9 @@ fe_gift_ships = {
 }
 
 fe_gift_target_is_machine = {
-	OR = {
-		has_authority = auth_machine_intelligence 
-		has_country_flag = synthetic_empire				
-	}
+	is_synthetic_empire = yes
 }
 
 fe_gift_target_is_not_machine = {
-	NOR = {
-		has_authority = auth_machine_intelligence 
-		has_country_flag = synthetic_empire				
-	}
+	is_synthetic_empire = no
 }

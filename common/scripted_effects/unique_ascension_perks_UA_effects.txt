@@ -176,12 +176,12 @@ underworld_marauder_raid = {
 				set_owner = event_target:marauder_raiding_country # Real owner
 				assign_leader = last_created_leader			
 				random_system = {
-					limit = { any_system_planet = { exists = owner owner = { is_same_value = root } num_pops > 0 } }
+					limit = { any_system_planet = { exists = owner is_owned_by = root num_pops > 0 } }
 					save_event_target_as = raid_system
 				}
 				event_target:raid_system = {
 					random_system_planet = {
-						limit = { exists = owner owner = { is_same_value = root } num_pops > 0 }
+						limit = { exists = owner is_owned_by = root num_pops > 0 }
 						save_event_target_as = raid_planet
 					}
 				}

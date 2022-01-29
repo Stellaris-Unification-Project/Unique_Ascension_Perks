@@ -42,11 +42,11 @@ utopia_site = {
 					who = prev.from
 					status = yes
 				}
-				colonizeable_planet = no
+				colonizable_planet = no
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_anomaly"
-				NOT = { has_anomaly = yes }
+				has_anomaly = no
 			}
 
  			# balance for think tanks
@@ -81,17 +81,14 @@ utopia_site = {
 			any_neighbor_system = {
 				exists = owner
 				NOT = { 
-					owner = { is_same_value = from } 
+					is_owned_by = from 
 				}
 			}
 		}			
 		modifier = {
 			factor = 2.0
 			from = {
-				OR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}			
+				is_authoritarian = yes			
 			}
 		}
 	}	

@@ -1,7 +1,7 @@
 
 d_aware_housing_building = {
 	icon = d_aware_housing_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -12,7 +12,7 @@ d_aware_housing_building = {
 
 d_aware_energy_building = {
 	icon = d_aware_energy_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits produces = { energy = 10 } }
@@ -23,7 +23,7 @@ d_aware_energy_building = {
 
 d_aware_mining_building = {
 	icon = d_aware_mining_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 1 } produces = { minerals = 2 } }
@@ -34,7 +34,7 @@ d_aware_mining_building = {
 
 d_aware_farming_building = {
 	icon = d_aware_farming_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_food
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 1 } produces = { food = 3 } }
@@ -45,7 +45,7 @@ d_aware_farming_building = {
 
 d_aware_amenities_building = {
 	icon = d_aware_amenities_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -56,7 +56,7 @@ d_aware_amenities_building = {
 
 d_aware_crime_building = {
 	icon = d_aware_crime_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -66,7 +66,7 @@ d_aware_crime_building = {
 
 d_aware_consumer_building = {
 	icon = d_aware_consumer_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 4 minerals = 1 } produces = { consumer_goods = 1 } }
@@ -76,7 +76,7 @@ d_aware_consumer_building = {
 
 d_aware_foundry_building = {
 	icon = d_aware_foundry_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 4 minerals = 2 } produces = { alloys = 1 } }
@@ -87,7 +87,7 @@ d_aware_foundry_building = {
 
 d_aware_research_building = {
 	icon = d_aware_research_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 4 minerals = 2 } produces = { physics_research = 1 society_research = 1 engineering_research = 1 } }
@@ -98,7 +98,7 @@ d_aware_research_building = {
 
 d_aware_trade_building = {
 	icon = d_aware_trade_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -107,7 +107,7 @@ d_aware_trade_building = {
 
 d_aware_army_building = {
 	icon = d_aware_army_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -118,7 +118,7 @@ d_aware_army_building = {
 
 d_aware_administration_building = {
 	icon = d_aware_administration_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } produces = { unity = 4 influence = 0.10 } }
@@ -134,7 +134,7 @@ d_aware_administration_building = {
 
 d_aware_culture_building = {
 	icon = d_aware_culture_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 1 } produces = { unity = 1 society_research = 1 } }
@@ -147,7 +147,7 @@ d_aware_culture_building = {
 
 d_aware_assembly_building = {
 	icon = d_aware_assembly_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 5 } }
@@ -158,7 +158,7 @@ d_aware_assembly_building = {
 
 d_aware_growth_building = {
 	icon = d_aware_growth_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 2 } }
@@ -169,7 +169,7 @@ d_aware_growth_building = {
 
 d_aware_refinery_building = {
 	icon = d_aware_refinery_building
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	resources = { category = planet_deposits upkeep = { energy = 10 } produces = { volatile_motes = 0.33 exotic_gases = 0.33 rare_crystals = 0.33 } }

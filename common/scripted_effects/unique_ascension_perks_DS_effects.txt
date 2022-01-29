@@ -164,8 +164,10 @@ defense_sentinels_idle_fleet_selection = {
 						is_fleet_idle = yes
 					}
 					AND = {
-						NOT = { has_fleet_flag = defense_sentinels_fleet_patroling }
-						NOT = { has_fleet_flag = defense_sentinels_fleet_defending }
+						NOR = {
+							has_fleet_flag = defense_sentinels_fleet_patroling
+							has_fleet_flag = defense_sentinels_fleet_defending
+						}
 						is_fleet_idle = yes
 					}
 				}

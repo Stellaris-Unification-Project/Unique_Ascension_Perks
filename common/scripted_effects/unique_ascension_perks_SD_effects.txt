@@ -434,8 +434,10 @@ space_domestication_idle_fleet_selection = {
 						is_fleet_idle = yes
 					}
 					AND = {
-						NOT = { has_fleet_flag = domesticated_security_fleet_patroling }
-						NOT = { has_fleet_flag = domesticated_security_fleet_defending }
+						NOR = {
+							has_fleet_flag = domesticated_security_fleet_patroling
+							has_fleet_flag = domesticated_security_fleet_defending
+						}
 						is_fleet_idle = yes
 					}
 				}
@@ -546,7 +548,7 @@ space_domestication_cloud_multiplication = {
 		10 = {
 			#from = { save_event_target_as = notify_country }
 			fromfrom = {
-				#solar_system = { random_system_planet = { limit = { is_star = yes } save_event_target_as = spawn_location } }
+				#solar_system = { star = { save_event_target_as = spawn_location } }
 				save_event_target_as = spawn_location
 				create_fleet = {
 					name = "NAME_Effluvial_Offspring"

@@ -206,7 +206,7 @@ country_event = {
 	location = event_target:pirate_system
 	is_triggered_only = yes
 	immediate = {
-		random_system_within_border = { limit = { NOT = { any_system_planet = { is_capital = yes } } } save_event_target_as = pirate_system }
+		random_system_within_border = { limit = { NOT = { is_capital_system = yes } } save_event_target_as = pirate_system }
 		capital_scope = { solar_system = { save_event_target_as = capital_system } }
 		owner_species = { save_event_target_as = owner_species }
 		create_drone_pirate_country = yes
@@ -664,8 +664,7 @@ country_event = {
 			limit = { has_planet_flag = new_planet_unnamed }
 			save_event_target_as = planet_to_rename
 			solar_system ={
-				random_system_planet = {
-					limit = { is_star = yes }
+				star = {
 					save_event_target_as = current_planet_name
 				}
 			}
@@ -843,10 +842,10 @@ country_event = {
 			capital_scope = {
 				solar_system = {
 					closest_system = {
-						limit = { exists = space_owner space_owner = { is_same_value = ROOT } has_natural_wormhole = no }
+						limit = { exists = space_owner is_owned_by = ROOT has_natural_wormhole = no }
 						save_event_target_as = lh_empire_capital_system
 						event_target:lh_basic_system = {
-							#every_system_planet = { surveyed = { set_surveyed = yes surveyor = ROOT } }
+							#every_system_planet = { surveyed = { surveyed = yes surveyor = ROOT } }
 							#create_starbase = { size = starbase_outpost owner = ROOT }
 							#ROOT = { give_technology = { tech = tech_new_systems_localization } }
 							#ROOT = { while = { count = 10 spawn_lh_system = yes } }
@@ -863,7 +862,7 @@ country_event = {
 				solar_system = {
 					save_event_target_as = lh_empire_capital_system
 					event_target:lh_basic_system = {
-						#every_system_planet = { surveyed = { set_surveyed = yes surveyor = ROOT } }
+						#every_system_planet = { surveyed = { surveyed = yes surveyor = ROOT } }
 						#create_starbase = { size = starbase_outpost owner = ROOT }
 						#ROOT = { give_technology = { tech = tech_new_systems_localization } }
 						#ROOT = { while = { count = 10 spawn_lh_system = yes } }
@@ -876,7 +875,7 @@ country_event = {
 		}
 		#random_system_within_border = {
 		#	save_event_target_as = lh_empire_capital_system
-		#	limit = { any_system_planet = { is_capital = yes } }
+		#	limit = { is_capital_system = yes }
 		#	event_target:lh_basic_system = {
 		#		prev = { spawn_natural_wormhole = { bypass_type = wormhole random_pos = yes orbit_angle = 360 } }
 		#		spawn_natural_wormhole = { bypass_type = wormhole random_pos = yes orbit_angle = 270 }
@@ -1349,7 +1348,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_breeding_facility_1 } remove_deposit = yes }
 			set_variable = { which = d_breeding_facility_1 value = 0 }
 			random_owned_pop = {
-				limit = { is_organic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_organic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -1377,7 +1376,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_breeding_facility_2 } remove_deposit = yes }
 			set_variable = { which = d_breeding_facility_2 value = 0 }
 			random_owned_pop = {
-				limit = { is_organic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_organic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -1405,7 +1404,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_breeding_facility_3 } remove_deposit = yes }
 			set_variable = { which = d_breeding_facility_3 value = 0 }
 			random_owned_pop = {
-				limit = { is_organic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_organic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -1433,7 +1432,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_breeding_facility_4 } remove_deposit = yes }
 			set_variable = { which = d_breeding_facility_4 value = 0 }
 			random_owned_pop = {
-				limit = { is_organic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_organic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -1461,7 +1460,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_breeding_facility_5 } remove_deposit = yes }
 			set_variable = { which = d_breeding_facility_5 value = 0 }
 			random_owned_pop = {
-				limit = { is_organic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_organic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -1591,7 +1590,7 @@ country_event = {
 				is_capital = yes
 				colony_age >= 1
 			}		
-			count_pops = { count >= 10 limit = { has_job = yes } }	
+			count_owned_pop = { count >= 10 limit = { has_job = yes } }	
 			NOT = { has_planet_flag = ap_expansion_infinity_collection }
 		}
 	}	
@@ -1599,7 +1598,7 @@ country_event = {
 		random_owned_planet = {
 			limit = {
 				colony_age >= 1
-				count_pops = { count >= 10 limit = { has_job = yes } }	
+				count_owned_pop = { count >= 10 limit = { has_job = yes } }	
 				NOT = { has_planet_flag = ap_expansion_infinity_collection }
 			}
 			save_event_target_as = ap_expansion_infinity_planet
@@ -2408,7 +2407,7 @@ country_event = {
 			limit = { has_relation_flag = { who = event_target:main_country flag = domesticated_spaceborn_alien } }
 			save_event_target_as = domesticated_spaceborn_alien
 			every_owned_fleet = {
-				limit = { is_ship_class = shipclass_starbase solar_system = { exists = space_owner space_owner = { is_same_value = event_target:domesticated_spaceborn_alien } } }					
+				limit = { is_ship_class = shipclass_starbase solar_system = { exists = space_owner is_owned_by = event_target:domesticated_spaceborn_alien } }					
 				set_owner = event_target:main_country
 				set_controller = event_target:main_country
 			}
@@ -2563,7 +2562,7 @@ country_event = {
 		name = "We would like to sacrifice a world to you." 
 		allow = { 
 			custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req03 any_owned_planet = { num_pops >= 20 } }
-			custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT	= { has_leviathan_master_sacrified_world_modifier = yes } } 
+			custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } 
 		}
 		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.1058 } } 
 	}
@@ -2781,7 +2780,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.1
 		trigger = { event_target:planet_target_1 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_1 = { leviathan_master_consume_planet = yes } }
 		leviathan_master_gives_modifier = yes
@@ -2789,7 +2788,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.2
 		trigger = { event_target:planet_target_2 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_2 = { leviathan_master_consume_planet = yes } }
 		leviathan_master_gives_modifier = yes
@@ -2797,7 +2796,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.3
 		trigger = { event_target:planet_target_3 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_3 = { leviathan_master_consume_planet = yes  } }
 		leviathan_master_gives_modifier = yes
@@ -2805,7 +2804,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.4
 		trigger = { event_target:planet_target_4 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_4 = { leviathan_master_consume_planet = yes } }
 		leviathan_master_gives_modifier = yes
@@ -2813,7 +2812,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.5
 		trigger = { event_target:planet_target_5 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_5 = { leviathan_master_consume_planet = yes } }
 		leviathan_master_gives_modifier = yes
@@ -2821,7 +2820,7 @@ country_event = {
 	option = {
 		name = UniqueAscensionPerksEvents.1058.Planet.6
 		trigger = { event_target:planet_target_6 = { exists = this } }	
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 NOT = { has_leviathan_master_sacrified_world_modifier = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.1055.Req04 has_leviathan_master_sacrified_world_modifier = no } }
 		custom_tooltip = "The planet will be destroyed and all the populations present on it killed."
 		hidden_effect = { event_target:planet_target_6 = { leviathan_master_consume_planet = yes } }
 		leviathan_master_gives_modifier = yes
@@ -3169,7 +3168,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_robot_command_1 } remove_deposit = yes }
 			set_variable = { which = d_robot_command_1 value = 0 }
 			random_owned_pop = {
-				limit = { is_robotic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_robotic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -3196,7 +3195,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_robot_command_2 } remove_deposit = yes }
 			set_variable = { which = d_robot_command_2 value = 0 }
 			random_owned_pop = {
-				limit = { is_robotic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_robotic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -3223,7 +3222,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_robot_command_3 } remove_deposit = yes }
 			set_variable = { which = d_robot_command_3 value = 0 }
 			random_owned_pop = {
-				limit = { is_robotic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_robotic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -3250,7 +3249,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_robot_command_4 } remove_deposit = yes }
 			set_variable = { which = d_robot_command_4 value = 0 }
 			random_owned_pop = {
-				limit = { is_robotic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_robotic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -3277,7 +3276,7 @@ planet_event = {
 			every_deposit = { limit = { is_deposit_type = d_robot_command_5 } remove_deposit = yes }
 			set_variable = { which = d_robot_command_5 value = 0 }
 			random_owned_pop = {
-				limit = { is_robotic_species = yes has_population_control = no is_being_purged = no is_being_assimilated = no } 
+				limit = { is_robotic_species = yes has_population_control = { value = no country = prev.owner } is_being_purged = no is_being_assimilated = no } 
 				weights = {
 					base = 100
 					modifier = { add = 100 is_same_species = root.owner.species }
@@ -3633,7 +3632,7 @@ country_event = {
 		set_global_flag = sleepers_awake_happened
 		country_event = { id = fallen_empires_awakening.3 }
 		# Notify players
-		every_country = { limit = { is_ai = no } country_event = { id = fallen_empires_awakening.2 } }
+		every_playable_country = { limit = { is_ai = no } country_event = { id = fallen_empires_awakening.2 } }
 		observer_event = { id = observer.73 }
 		# War in Heaven
 		if = {
@@ -3656,7 +3655,7 @@ country_event = {
 						set_timed_country_flag = { flag = timed_ancient_rival days = 3650 }
 						set_timed_country_flag = { flag = ai_no_wars days = 3650 }
 						root = { set_timed_country_flag = { flag = ai_no_wars days = 3650 } }
-						every_country = {
+						every_playable_country = {
 							limit = { is_country_type = default }
 							set_timed_country_flag = { flag = ai_no_wars days = 3650 }
 						}	
@@ -3673,7 +3672,7 @@ country_event = {
 						set_timed_country_flag = { flag = timed_ancient_rival days = 3650 }
 						set_timed_country_flag = { flag = ai_no_wars days = 3650 }
 						root = { set_timed_country_flag = { flag = ai_no_wars days = 3650 } }
-						every_country = {
+						every_playable_country = {
 							limit = {
 								is_country_type = default
 							}
@@ -4219,14 +4218,14 @@ country_event = {
 		trigger = {
 			text = "UniqueAscensionPerksEvents.89.Desc"
 			text = newline	
-			success_text = { text = "Unity.Gain.Militarist" OR = { has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist } }
-			success_text = { text = "Unity.Gain.Pacifist" OR = { has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist } }
-			success_text = { text = "Unity.Gain.Xenophile" OR = { has_ethic = ethic_xenophile has_ethic = ethic_fanatic_xenophile } }
-			success_text = { text = "Unity.Gain.Xenophobe" OR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe } }
-			success_text = { text = "Unity.Gain.Materialist" OR = { has_ethic = ethic_materialist has_ethic = ethic_fanatic_materialist } }
-			success_text = { text = "Unity.Gain.Spiritualist" OR = { has_ethic = ethic_spiritualist has_ethic = ethic_fanatic_spiritualist } }
-			success_text = { text = "Unity.Gain.Authoritarian" OR = { has_ethic = ethic_authoritarian has_ethic = ethic_fanatic_authoritarian } }
-			success_text = { text = "Unity.Gain.Egalitarian" OR = { has_ethic = ethic_egalitarian has_ethic = ethic_fanatic_egalitarian } }
+			success_text = { text = "Unity.Gain.Militarist" OR = { is_militarist = yes } }
+			success_text = { text = "Unity.Gain.Pacifist" OR = { is_pacifist = yes } }
+			success_text = { text = "Unity.Gain.Xenophile" OR = { is_xenophile = yes } }
+			success_text = { text = "Unity.Gain.Xenophobe" OR = { is_xenophobe = yes } }
+			success_text = { text = "Unity.Gain.Materialist" OR = { is_materialist = yes } }
+			success_text = { text = "Unity.Gain.Spiritualist" OR = { is_spiritualist = yes } }
+			success_text = { text = "Unity.Gain.Authoritarian" OR = { is_authoritarian = yes } }
+			success_text = { text = "Unity.Gain.Egalitarian" OR = { is_egalitarian = yes } }
 			success_text = { text = "Unity.Gain.Gestalt" has_ethic = ethic_gestalt_consciousness }
 		}
 	}
@@ -5414,8 +5413,8 @@ country_event = {
 		allow = {
 			resource_stockpile_compare = { resource = food value >= 900 }
 			OR = {		
-				AND = { event_target:hivemind_reserve_planet = { exists = owner owner = { is_same_value = ROOT } } }
-				AND = { event_target:hivemind_reserve_planet = { solar_system = { exists = space_owner space_owner = { is_same_value = ROOT } } } }
+				AND = { event_target:hivemind_reserve_planet = { exists = owner is_owned_by = ROOT } }
+				AND = { event_target:hivemind_reserve_planet = { solar_system = { exists = space_owner is_owned_by = ROOT } } }
 			}
 		}
 		add_resource = { food = -900 }
@@ -5551,11 +5550,11 @@ country_event = {
 	mean_time_to_happen = { years = 2 }
 	trigger = {
 		has_country_flag = ap_eternal_vigilance_project
-		any_system_within_border = { NOR = { any_ship_in_system = { fleet = { has_fleet_flag = eternal_vigilance_fleet } exists = owner owner = { is_same_value = root } } has_star_flag = vigilance_system } }
+		any_system_within_border = { NOR = { any_ship_in_system = { fleet = { has_fleet_flag = eternal_vigilance_fleet } exists = owner is_owned_by = root } has_star_flag = vigilance_system } }
 	}
 	immediate = {
 		random_system_within_border = {
-			limit = { NOR = { any_ship_in_system = { fleet = { has_fleet_flag = eternal_vigilance_fleet } exists = owner owner = { is_same_value = root } } has_star_flag = vigilance_system } }
+			limit = { NOR = { any_ship_in_system = { fleet = { has_fleet_flag = eternal_vigilance_fleet } exists = owner is_owned_by = root } has_star_flag = vigilance_system } }
 			set_timed_star_flag = { flag = vigilance_system years = 15 }
 			random_system_planet = { limit = { is_primary_star = yes } save_event_target_as = spawn_location }
 			create_fleet = {
@@ -6735,16 +6734,16 @@ country_event = {
 planet_event = {
 	id = UniqueAscensionPerksEvents.204
 	title = syndaw.1020.name
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_materialist has_ethic = ethic_fanatic_materialist } } } text = syndaw.1020.desc.mater }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_spiritualist has_ethic = ethic_fanatic_spiritualist } } } text = syndaw.1020.desc.spiri }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist } } } text = syndaw.1020.desc.milit }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist } } } text = syndaw.1020.desc.pacif }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_egalitarian has_ethic = ethic_fanatic_egalitarian } } } text = syndaw.1020.desc.egali }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_authoritarian has_ethic = ethic_fanatic_authoritarian } } } text = syndaw.1020.desc.autho }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_xenophile has_ethic = ethic_fanatic_xenophile } } } text = syndaw.1020.desc.phile }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe } } } text = syndaw.1020.desc.phobe }
-	desc = { trigger = { owner = { OR = { has_ethic = ethic_egalitarian has_ethic = ethic_fanatic_egalitarian } } } text = syndaw.1020.desc.egali }
-	desc = { trigger = { owner = { NOR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe has_ethic = ethic_xenophile has_ethic = ethic_fanatic_xenophile has_ethic = ethic_authoritarian has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_egalitarian has_ethic = ethic_fanatic_egalitarian has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist has_ethic = ethic_spiritualist has_ethic = ethic_fanatic_spiritualist has_ethic = ethic_materialist has_ethic = ethic_fanatic_materialist } } } text = syndaw.1020.desc }
+	desc = { trigger = { owner = { OR = { is_materialist = yes } } } text = syndaw.1020.desc.mater }
+	desc = { trigger = { owner = { OR = { is_spiritualist = yes } } } text = syndaw.1020.desc.spiri }
+	desc = { trigger = { owner = { OR = { is_militarist = yes } } } text = syndaw.1020.desc.milit }
+	desc = { trigger = { owner = { OR = { is_pacifist = yes } } } text = syndaw.1020.desc.pacif }
+	desc = { trigger = { owner = { OR = { is_egalitarian = yes } } } text = syndaw.1020.desc.egali }
+	desc = { trigger = { owner = { OR = { is_authoritarian = yes } } } text = syndaw.1020.desc.autho }
+	desc = { trigger = { owner = { OR = { is_xenophile = yes } } } text = syndaw.1020.desc.phile }
+	desc = { trigger = { owner = { OR = { is_xenophobe = yes } } } text = syndaw.1020.desc.phobe }
+	desc = { trigger = { owner = { OR = { is_egalitarian = yes } } } text = syndaw.1020.desc.egali }
+	desc = { trigger = { owner = { NOR = { is_xenophobe = yes is_xenophile = yes is_authoritarian = yes is_egalitarian = yes is_pacifist = yes is_militarist = yes is_spiritualist = yes is_materialist = yes } } } text = syndaw.1020.desc }
 	picture = GFX_evt_machine_sapience
 	show_sound = event_ai_started
 	is_triggered_only = yes
@@ -7133,7 +7132,7 @@ country_event = {
 				AND = { count_owned_ship = { limit = { is_ship_size = small_ship_ai } count < 150 } ROOT = { has_technology = tech_defense_sentinels_1 NOT = { has_technology = tech_defense_sentinels_2 has_technology = tech_defense_sentinels_3 } } }
 				AND = { count_owned_ship = { limit = { is_ship_size = small_ship_ai } count < 300 } ROOT = { has_technology = tech_defense_sentinels_1 has_technology = tech_defense_sentinels_2 NOT = { has_technology = tech_defense_sentinels_3 } } }
 				AND = { count_owned_ship = { limit = { is_ship_size = small_ship_ai } count < 450 } ROOT = { has_technology = tech_defense_sentinels_1 has_technology = tech_defense_sentinels_2 has_technology = tech_defense_sentinels_3 } }
-				#event_target:the_ally_faction = { count_owned_ships = { limit = { is_ship_size = small_ship_ai } count < 50 } }
+				#event_target:the_ally_faction = { count_owned_ship = { limit = { is_ship_size = small_ship_ai } count < 50 } }
 			}
 		}
 	}
@@ -7822,7 +7821,7 @@ country_event = {
 			capital_scope = { 
 				solar_system = { 
 					closest_system = { 
-						limit = { has_natural_wormhole = no exists = space_owner space_owner = { is_same_value = root } } 
+						limit = { has_natural_wormhole = no exists = space_owner is_owned_by = root } 
 						save_event_target_as = sector_z749_system_capital_system
 						spawn_system = { min_distance >= 20 max_distance <= 50 min_orientation_angle = 0 max_orientation_angle = 359 initializer = "sector_z749_system" }
 					}
@@ -7971,22 +7970,22 @@ planet_event = {
 		owner = {	
 			OR = { has_ascension_perk = ap_pyramidal_society has_country_flag = ap_pyramidal_society }	
 			OR = {
-				AND = { ROOT = { has_deposit = d_district_governor } NOT = { is_default_empire = yes }  }
-				AND = { ROOT = { has_deposit = d_district_university } NOT = { is_default_empire = yes }  }
-				AND = { ROOT = { has_deposit = d_district_defense } NOT = { is_default_empire = yes }  }
-				AND = { ROOT = { has_deposit = d_district_industry } NOT = { is_default_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_queen } NOT = { is_hive_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_nursery } NOT = { is_hive_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_entrepot } NOT = { is_hive_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_forest } NOT = { is_hive_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_foundry } NOT = { is_machine_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_security } NOT = { is_machine_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_upgrade } NOT = { is_machine_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_recycling } NOT = { is_machine_empire = yes } }
-				AND = { ROOT = { has_deposit = d_district_finance } NOT = { is_megacorp = yes } }
-				AND = { ROOT = { has_deposit = d_district_casino } NOT = { is_megacorp = yes } }
-				AND = { ROOT = { has_deposit = d_district_bank } NOT = { is_megacorp = yes } }
-				AND = { ROOT = { has_deposit = d_district_journalism } NOT = { is_megacorp = yes } }
+				AND = { ROOT = { has_deposit = d_district_governor } is_default_empire = no  }
+				AND = { ROOT = { has_deposit = d_district_university } is_default_empire = no  }
+				AND = { ROOT = { has_deposit = d_district_defense } is_default_empire = no  }
+				AND = { ROOT = { has_deposit = d_district_industry } is_default_empire = no }
+				AND = { ROOT = { has_deposit = d_district_queen } is_hive_empire = no }
+				AND = { ROOT = { has_deposit = d_district_nursery } is_hive_empire = no }
+				AND = { ROOT = { has_deposit = d_district_entrepot } is_hive_empire = no }
+				AND = { ROOT = { has_deposit = d_district_forest } is_hive_empire = no }
+				AND = { ROOT = { has_deposit = d_district_foundry } is_machine_empire = no }
+				AND = { ROOT = { has_deposit = d_district_security } is_machine_empire = no }
+				AND = { ROOT = { has_deposit = d_district_upgrade } is_machine_empire = no }
+				AND = { ROOT = { has_deposit = d_district_recycling } is_machine_empire = no }
+				AND = { ROOT = { has_deposit = d_district_finance } is_megacorp = no }
+				AND = { ROOT = { has_deposit = d_district_casino } is_megacorp = no }
+				AND = { ROOT = { has_deposit = d_district_bank } is_megacorp = no }
+				AND = { ROOT = { has_deposit = d_district_journalism } is_megacorp = no }
 			}
 		}
 	}
@@ -8044,7 +8043,7 @@ planet_event = {
 			}
 			95 = {} 
 		}	
-		#random_list = { 15 = { from = { random_pop = { kill_pop = yes } } } 85 = {} }
+		#random_list = { 15 = { from = { random_owned_pop = { kill_pop = yes } } } 85 = {} }
 	}
 }
 
@@ -8076,7 +8075,7 @@ country_event = {
 		hidden_effect = { event_target:surgical_strike_planet = { surgical_strike_destroy_buildings = yes } }
 	}
 	option = {  
-		allow = { OR = { has_ascension_perk = ap_nihilistic_acquisition has_valid_civic = civic_barbaric_despoilers has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator has_valid_civic = civic_machine_assimilator } }
+		allow = { OR = { has_ascension_perk = ap_nihilistic_acquisition has_valid_civic = civic_barbaric_despoilers is_homicidal = yes has_valid_civic = civic_machine_assimilator } }
 		name = "Abduct the Pops." 
 		custom_tooltip = "Will abduct the pops present on the planet and transfer them into your colonies. The amount of pops abducted will depend on the size of the navy fleet performing the surgical strike. There are chances for your threat to be increased by doing that."
 		hidden_effect = { event_target:surgical_strike_planet = { surgical_strike_abduct_pop = yes } } 
@@ -8734,7 +8733,7 @@ country_event = {
 	is_triggered_only = yes
 	option = { 
 		name = UniqueAscensionPerksEvents.343.Name
-		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.342.Req01 NOT = { has_treasures_deal_gestalt = yes } } }
+		allow = { custom_tooltip = { fail_text = UniqueAscensionPerksEvents.342.Req01 has_treasures_deal_gestalt = no } }
 		hidden_effect = { 
 			if = { limit = { is_gestalt = no } country_event = { id = UniqueAscensionPerksEvents.343 } }
 			else = { country_event = { id = UniqueAscensionPerksEvents.346 } }
@@ -8776,7 +8775,7 @@ country_event = {
 	picture = GFX_evt_wheel_fortune
 	is_triggered_only = yes
 	immediate = {
-		random_owned_planet = { limit = { NOT = { has_treasures_deal = yes } } save_event_target_as = planet_1 }
+		random_owned_planet = { limit = { has_treasures_deal = no } save_event_target_as = planet_1 }
 		random_owned_planet = { limit = { NOR = { has_treasures_deal = yes is_same_value = event_target:planet_1 } } save_event_target_as = planet_2 }
 		random_owned_planet = { limit = { NOR = { has_treasures_deal = yes is_same_value = event_target:planet_1 is_same_value = event_target:planet_2 } } save_event_target_as = planet_3 }
 		random_owned_planet = { limit = { NOR = { has_treasures_deal = yes is_same_value = event_target:planet_1 is_same_value = event_target:planet_2 is_same_value = event_target:planet_3 } } save_event_target_as = planet_4 }

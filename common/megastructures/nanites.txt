@@ -40,7 +40,7 @@ nanite_factory_site = {
 	}
 	placement_rules = {
 		planet_possible = {		
-			custom_tooltip = { fail_text = "requires_no_anomaly" NOT = { has_anomaly = yes } }
+			custom_tooltip = { fail_text = "requires_no_anomaly" has_anomaly = no }
 			custom_tooltip = { fail_text = "requires_not_minor_planetary_body" NOR = { is_asteroid = yes is_moon = yes } }
 			custom_tooltip = { fail_text = "requires_not_star" is_star = no }
 			custom_tooltip = { fail_text = "requires_not_ring_world" is_ringworld = no }

@@ -74,8 +74,10 @@ surgical_strike_genocidal_opinion = {
 	every_country = {
 		limit = {
 			has_communications = ROOT
-			NOT = { is_country = ROOT }
-			NOT = { is_same_species = ROOT }
+			NOR = {
+				is_country = ROOT
+				is_same_species = ROOT
+			}
 			NOT = { has_ai_personality_behaviour = purger }
 			OR = {
 				is_country_type = default

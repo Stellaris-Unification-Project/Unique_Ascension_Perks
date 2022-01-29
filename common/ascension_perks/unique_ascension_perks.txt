@@ -539,8 +539,8 @@ ap_fallen_disciple = {
 		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.68 } }
 	}
 	potential = { 
-		NOT = { has_ascension_perk = ap_fallen_disciple } 
-		NOR = { 
+		NOR = {
+			has_ascension_perk = ap_fallen_disciple
 			has_civic = civic_fanatic_purifiers
 			has_civic = civic_hive_devouring_swarm
 			has_civic = civic_machine_terminator
@@ -933,8 +933,10 @@ ap_utopian_realisation = {
 		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.410 } }
 	}
 	potential = { 
-		NOT = { has_ascension_perk = ap_utopian_realisation }
-		NOT = { has_valid_civic = civic_fanatic_purifiers }
+		NOR = {
+			has_ascension_perk = ap_utopian_realisation
+			has_valid_civic = civic_fanatic_purifiers
+		}
 		OR = {	
 			is_gestalt = no	
 			AND = {

@@ -12,7 +12,8 @@ governor_assitant = {
 	building_icon = building_akx_worm_3
 	clothes_texture_index = 1
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { ruler_job_check_trigger = yes }
+	possible_precalc = can_fill_ruler_job
+	possible = { }
 	resources = { category = planet_jobs produces = { influence = 0.33 } upkeep = { consumer_goods = 2 } }	
 	planet_modifier = { pop_government_ethic_attraction = 0.05 }
 	country_modifier = { edict_length_mult = 0.03 }
@@ -25,7 +26,8 @@ judge = {
 	building_icon = building_autocurating_vault
 	clothes_texture_index = 1
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { ruler_job_check_trigger = yes }
+	possible_precalc = can_fill_ruler_job
+	possible = { }
 	resources = { category = planet_jobs produces = { unity = 4 } upkeep = { consumer_goods = 2 } }	
 	planet_modifier = { planet_stability_add = 0.5 planet_crime_add = -100 }
 	weight = { weight = @ruler_job_weight modifier = { factor = 0.2 has_citizenship_rights = no } }
@@ -37,7 +39,8 @@ ambassador = {
 	building_icon = building_master_archive
 	clothes_texture_index = 1
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { ruler_job_check_trigger = yes }
+	possible_precalc = can_fill_ruler_job
+	possible = { }
 	resources = { category = planet_jobs produces = { society_research = 12 } upkeep = { consumer_goods = 2 } }	
 	country_modifier = { country_admin_cap_add = 2 country_trust_growth = 0.02 country_trust_cap_add = 5 }
 	weight = { weight = @ruler_job_weight modifier = { factor = 0.2 has_citizenship_rights = no } }
@@ -111,7 +114,8 @@ teacher = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = { unity = 5 society_research = 2 } }	
 	weight = { weight = @worker_job_weight modifier = { factor = 0.25 is_enslaved = yes can_take_servant_job = no } }
 }
@@ -123,7 +127,8 @@ hive_queen = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_hive_major_capital
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = {} upkeep = { food = 4 } }
 	planet_modifier = { planet_jobs_produces_mult = 0.07 planet_amenities_no_happiness_add = 20 }
 	weight = { weight = @spawner_drone_job_weight }
@@ -134,7 +139,8 @@ royal_guard = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_hive_warren
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { unity = 10 } upkeep = { food = 2 } }
 	planet_modifier = { planet_crime_add = -60 }
 	pop_modifier = { pop_defense_armies_add = 3 }
@@ -146,7 +152,8 @@ stabilizer = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_palace
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { unity = 8 } upkeep = { food = 2 } }
 	country_modifier = { country_admin_cap_add = 5 country_resource_max_add = 1000 }
 	weight = { weight = @synapse_drone_job_weight }
@@ -157,7 +164,8 @@ nurse = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_hive_node
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { food = 1 society_research = 1 } }
 	planet_modifier = { pop_growth_speed = 0.03 }
 	weight = { weight = 2 }
@@ -168,7 +176,8 @@ botanist = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_paradise_dome
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { food = 1 society_research = 2 } }
 	country_modifier = { terraform_speed_mult = 0.01 }
 	planet_modifier = { pop_environment_tolerance = 0.01 }
@@ -182,7 +191,8 @@ protector = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_hall_judgment
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { unity = 8 } upkeep = { minerals = 3 } }
 	planet_modifier = { planet_stability_add = 1 planet_crime_add = -30 }
 	pop_modifier = { pop_defense_armies_add = 3 }
@@ -194,7 +204,8 @@ improver = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_nanite_transmuter
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { engineering_research = 4 } upkeep = { minerals = 3 } }
 	country_modifier = { modify_species_cost_mult = -0.01 }
 	planet_modifier = { planet_jobs_produces_mult = 0.03 planet_amenities_no_happiness_add = 6 }
@@ -206,7 +217,8 @@ constructor = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_production_center
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { alloys = 2 engineering_research = 1 } upkeep = { minerals = 5 } }
 	planet_modifier = { planet_pop_assembly_add = 0.5 planet_amenities_no_happiness_add = 3 }
 	weight = { weight = 2 }
@@ -217,7 +229,8 @@ recycler = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_wrecking_yards
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { energy = 2 minerals = 2 food = 2 } }
 	planet_modifier = { planet_amenities_no_happiness_add = 1 }
 	weight = { weight = 2 }
@@ -231,7 +244,8 @@ economist = {
 	building_icon = building_commercial_forum
 	clothes_texture_index = 1
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { ruler_job_check_trigger = yes }
+	possible_precalc = can_fill_ruler_job
+	possible = { }
 	resources = { category = planet_jobs produces = { energy = 6 } upkeep = { consumer_goods = 2 } }	
 	planet_modifier = { trade_value_mult = 0.07 planet_amenities_add = 10 }
 	weight = { weight = @ruler_job_weight modifier = { factor = 0.2 has_citizenship_rights = no } }
@@ -308,7 +322,8 @@ player = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = { unity = 4 society_research = 1 } }
 	planet_modifier = { planet_amenities_add = 4 }	
 	weight = { weight = @worker_job_weight modifier = { factor = 0.25 is_enslaved = yes can_take_servant_job = no } }
@@ -321,7 +336,8 @@ journalist = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = { society_research = 1 } }
 	planet_modifier = { planet_amenities_add = 6 pop_government_ethic_attraction = 0.03 pop_citizen_happiness = 0.01 }
 	weight = { weight = @worker_job_weight modifier = { factor = 0.25 is_enslaved = yes can_take_servant_job = no } }
@@ -346,7 +362,8 @@ builder_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_bureaucratic_1
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { engineering_research = 4 } upkeep = { minerals = 2 } }
 	planet_modifier = { planet_housing_add = 5 planet_housing_mult = 0.05 }
 	weight = { weight = @synapse_drone_job_weight }
@@ -369,7 +386,8 @@ controller_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_precinct_house
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { society_research = 2 unity = 1 } upkeep = { minerals = 2 } }
 	planet_modifier = { planet_crime_add = -25 planet_crime_mult = -0.08 planet_stability_add = 0.04 }
 	weight = { weight = @synapse_drone_job_weight }
@@ -392,7 +410,8 @@ spy_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_residence
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { physics_research = 2 society_research = 2 engineering_research = 2 unity = 1 } upkeep = { minerals = 2 } }
 	country_modifier = { all_technology_research_speed = 0.02 empire_size_penalty_mult = -0.005 megastructure_build_speed_mult = 0.02 }
 	weight = { weight = @synapse_drone_job_weight }
@@ -405,7 +424,8 @@ navy_pilot = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = { unity = 1 } }
 	country_modifier = { country_naval_cap_add = 6 country_command_limit_add = 1 }
 	pop_modifier = { pop_defense_armies_add = 1 }
@@ -417,7 +437,8 @@ navy_pilot_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_fortress
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { unity = 1 } }
 	country_modifier = { country_naval_cap_add = 6 country_command_limit_add = 1 }
 	pop_modifier = { pop_defense_armies_add = 1 }
@@ -431,7 +452,8 @@ smuggler = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = {} }
 	planet_modifier = { planet_crime_add = 2 trade_value_add = 4 }
 	country_modifier = { local_trade_protection_add = 1 }
@@ -443,7 +465,8 @@ smuggler_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_smuggling_rings
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { energy = 6 } }
 	planet_modifier = { planet_crime_no_happiness_add = 2 }
 	weight = { weight = 2 }
@@ -456,7 +479,8 @@ purifier = {
 	clothes_texture_index = 2
 	possible_pre_triggers = { has_owner = yes is_being_purged = no is_being_assimilated = no }
 	#possible = { complex_worker_job_check_trigger = yes }
-	possible = { worker_job_check_trigger = yes }	
+	possible_precalc = can_fill_worker_job
+	possible = { }	
 	resources = { category = planet_jobs produces = { minerals = 6 energy = 1 } upkeep = { alloys = 0.5 consumer_goods = 1 } }
 	planet_modifier = { pop_amenities_usage_mult = -0.005 }
 	weight = { weight = @worker_job_weight modifier = { factor = 0.25 is_enslaved = yes can_take_servant_job = no } }
@@ -467,7 +491,8 @@ purifier_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_bio_reprocessing_facilities
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { minerals = 6 energy = 1 } upkeep = { alloys = 1 } }
 	planet_modifier = { pop_amenities_usage_no_happiness_mult = -0.005 }
 	weight = { weight = 2 }
@@ -496,7 +521,8 @@ treasures_collector_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_treasures_entrepot
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { treasures = 2 energy = 3 } }
 	weight = { weight = @synapse_drone_job_weight }
 }
@@ -523,7 +549,8 @@ living_metal_extractor_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_liquid_metal_extractor
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs produces = { sr_living_metal = 2 } upkeep = { alloys = 6 } }
 	weight = { weight = @synapse_drone_job_weight }
 }
@@ -545,7 +572,8 @@ weapon_forger_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_military_academy
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs upkeep = { alloys = 9 } }
 	country_modifier = { ship_weapon_damage = 0.01 army_damage_mult = 0.01 }
 	weight = { weight = @synapse_drone_job_weight }
@@ -567,7 +595,8 @@ secret_alchimist_drone = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_citadel_of_faith
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+	possible = { }
 	resources = { category = planet_jobs upkeep = { minerals = 10 food = 10 energy = 10 } produces = { volatile_motes = 4 exotic_gases = 4 rare_crystals = 4 } }
 	weight = { weight = @synapse_drone_job_weight }
 }
@@ -611,7 +640,8 @@ u_physicist_drone = {
 	building_icon = building_research_lab_1
 	clothes_texture_index = 3
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }	
+	possible_precalc = can_fill_drone_job
+	possible = { }	
 	resources = { category = planet_researchers produces = { physics_research = 12 } upkeep = { minerals = 3 } }	
 	weight = { weight = @synapse_drone_job_weight }
 }
@@ -622,7 +652,8 @@ u_biologist_drone = {
 	building_icon = building_research_lab_1
 	clothes_texture_index = 3
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }	
+	possible_precalc = can_fill_drone_job
+	possible = { }	
 	resources = { category = planet_researchers produces = { society_research = 12 } upkeep = { minerals = 3 } }	
 	weight = { weight = @synapse_drone_job_weight }
 }
@@ -633,7 +664,8 @@ u_engineer_drone = {
 	building_icon = building_research_lab_1
 	clothes_texture_index = 3
 	possible_pre_triggers = { has_owner = yes is_enslaved = no is_being_purged = no is_being_assimilated = no }
-	possible = { drone_job_check_trigger = yes }	
+	possible_precalc = can_fill_drone_job
+	possible = { }	
 	resources = { category = planet_researchers produces = { engineering_research = 12 } upkeep = { minerals = 3 } }	
 	weight = { weight = @synapse_drone_job_weight }
 }
