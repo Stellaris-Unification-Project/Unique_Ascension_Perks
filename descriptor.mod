@@ -1,0 +1,17 @@
+version="1.0.0"
+tags={
+	"Buildings"
+	"Galaxy Generation"
+	"Gameplay"
+	"Utilities"
+	"Leaders"
+	"Military"
+	"Economy"
+	"Events"
+	"Diplomacy"
+	"Technologies"
+	"Spaceships"
+}
+name="Unique Ascension Perks"
+supported_version="3.0.*"
+remote_file_id="1693982756"
