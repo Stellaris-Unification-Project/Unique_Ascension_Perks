@@ -13,5 +13,5 @@ tags={
 	"Spaceships"
 }
 name="Unique Ascension Perks"
-supported_version="3.0.*"
+supported_version="3.2.2"
 remote_file_id="1693982756"

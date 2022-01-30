@@ -206,7 +206,7 @@ country_event = {
 	location = event_target:pirate_system
 	is_triggered_only = yes
 	immediate = {
-		random_system_within_border = { limit = { NOT = { is_capital_system = yes } } save_event_target_as = pirate_system }
+		random_system_within_border = { limit = { is_capital_system = no } save_event_target_as = pirate_system }
 		capital_scope = { solar_system = { save_event_target_as = capital_system } }
 		owner_species = { save_event_target_as = owner_species }
 		create_drone_pirate_country = yes

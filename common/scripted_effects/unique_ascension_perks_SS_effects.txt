@@ -77,8 +77,8 @@ surgical_strike_genocidal_opinion = {
 			NOR = {
 				is_country = ROOT
 				is_same_species = ROOT
+				has_ai_personality_behaviour = purger
 			}
-			NOT = { has_ai_personality_behaviour = purger }
 			OR = {
 				is_country_type = default
 				has_ai_personality = awakened_fallen_empire_xenophile		
